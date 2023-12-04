@@ -1,0 +1,84 @@
+13:21:08.909 [main] DEBUG io.netty.util.internal.logging.InternalLoggerFactory - Using Log4J2 as the default logging framework
+13:21:08.926 [main] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.level: simple
+13:21:08.926 [main] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.targetRecords: 4
+13:21:08.932 [main] DEBUG io.netty.util.ResourceLeakDetectorFactory - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@12bcd0c0
+13:21:08.963 [main] DEBUG io.netty.util.internal.PlatformDependent0 - -Dio.netty.noUnsafe: false
+13:21:08.964 [main] DEBUG io.netty.util.internal.PlatformDependent0 - Java version: 17
+13:21:08.965 [main] DEBUG io.netty.util.internal.PlatformDependent0 - sun.misc.Unsafe.theUnsafe: available
+13:21:08.966 [main] DEBUG io.netty.util.internal.PlatformDependent0 - sun.misc.Unsafe.copyMemory: available
+13:21:08.966 [main] DEBUG io.netty.util.internal.PlatformDependent0 - sun.misc.Unsafe.storeFence: available
+13:21:08.967 [main] DEBUG io.netty.util.internal.PlatformDependent0 - java.nio.Buffer.address: available
+13:21:08.968 [main] DEBUG io.netty.util.internal.PlatformDependent0 - direct buffer constructor: unavailable
+java.lang.UnsupportedOperationException: Reflective setAccessible(true) disabled
+	at io.netty.util.internal.ReflectionUtil.trySetAccessible(ReflectionUtil.java:31) ~[netty-common-4.1.92.Final.jar:4.1.92.Final]
+	at io.netty.util.internal.PlatformDependent0$5.run(PlatformDependent0.java:288) ~[netty-common-4.1.92.Final.jar:4.1.92.Final]
+	at java.security.AccessController.doPrivileged(AccessController.java:318) ~[?:?]
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:282) [netty-common-4.1.92.Final.jar:4.1.92.Final]
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:333) [netty-common-4.1.92.Final.jar:4.1.92.Final]
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:88) [netty-common-4.1.92.Final.jar:4.1.92.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:114) [netty-common-4.1.92.Final.jar:4.1.92.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:251) [netty-common-4.1.92.Final.jar:4.1.92.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:224) [netty-common-4.1.92.Final.jar:4.1.92.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:203) [netty-common-4.1.92.Final.jar:4.1.92.Final]
+	at org.asynchttpclient.DefaultAsyncHttpClient.newNettyTimer(DefaultAsyncHttpClient.java:111) [async-http-client-2.12.3.jar:?]
+	at org.asynchttpclient.DefaultAsyncHttpClient.<init>(DefaultAsyncHttpClient.java:90) [async-http-client-2.12.3.jar:?]
+	at org.asynchttpclient.Dsl.asyncHttpClient(Dsl.java:32) [async-http-client-2.12.3.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient.createHttpClient(NettyClient.java:91) [selenium-remote-driver-4.11.0.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient.<clinit>(NettyClient.java:43) [selenium-remote-driver-4.11.0.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient$Factory.createClient(NettyClient.java:124) [selenium-remote-driver-4.11.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:115) [selenium-remote-driver-4.11.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:92) [selenium-remote-driver-4.11.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.<init>(DriverCommandExecutor.java:89) [selenium-remote-driver-4.11.0.jar:?]
+	at org.openqa.selenium.chromium.ChromiumDriverCommandExecutor.<init>(ChromiumDriverCommandExecutor.java:43) [selenium-chromium-driver-4.11.0.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver$ChromeDriverCommandExecutor.<init>(ChromeDriver.java:115) [selenium-chrome-driver-4.11.0.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:105) [selenium-chrome-driver-4.11.0.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88) [selenium-chrome-driver-4.11.0.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:83) [selenium-chrome-driver-4.11.0.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:51) [selenium-chrome-driver-4.11.0.jar:?]
+	at SeleniumTutorialsByPavanSir.DropDownUnderSelectTag.main(DropDownUnderSelectTag.java:14) [test-classes/:?]
+13:21:08.985 [main] DEBUG io.netty.util.internal.PlatformDependent0 - java.nio.Bits.unaligned: available, true
+13:21:08.988 [main] DEBUG io.netty.util.internal.PlatformDependent0 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable
+java.lang.IllegalAccessException: class io.netty.util.internal.PlatformDependent0$7 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @74e52ef6
+	at jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:392) ~[?:?]
+	at java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:674) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:560) ~[?:?]
+	at io.netty.util.internal.PlatformDependent0$7.run(PlatformDependent0.java:410) ~[netty-common-4.1.92.Final.jar:4.1.92.Final]
+	at java.security.AccessController.doPrivileged(AccessController.java:318) ~[?:?]
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:401) [netty-common-4.1.92.Final.jar:4.1.92.Final]
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:333) [netty-common-4.1.92.Final.jar:4.1.92.Final]
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:88) [netty-common-4.1.92.Final.jar:4.1.92.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:114) [netty-common-4.1.92.Final.jar:4.1.92.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:251) [netty-common-4.1.92.Final.jar:4.1.92.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:224) [netty-common-4.1.92.Final.jar:4.1.92.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:203) [netty-common-4.1.92.Final.jar:4.1.92.Final]
+	at org.asynchttpclient.DefaultAsyncHttpClient.newNettyTimer(DefaultAsyncHttpClient.java:111) [async-http-client-2.12.3.jar:?]
+	at org.asynchttpclient.DefaultAsyncHttpClient.<init>(DefaultAsyncHttpClient.java:90) [async-http-client-2.12.3.jar:?]
+	at org.asynchttpclient.Dsl.asyncHttpClient(Dsl.java:32) [async-http-client-2.12.3.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient.createHttpClient(NettyClient.java:91) [selenium-remote-driver-4.11.0.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient.<clinit>(NettyClient.java:43) [selenium-remote-driver-4.11.0.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient$Factory.createClient(NettyClient.java:124) [selenium-remote-driver-4.11.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:115) [selenium-remote-driver-4.11.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:92) [selenium-remote-driver-4.11.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.<init>(DriverCommandExecutor.java:89) [selenium-remote-driver-4.11.0.jar:?]
+	at org.openqa.selenium.chromium.ChromiumDriverCommandExecutor.<init>(ChromiumDriverCommandExecutor.java:43) [selenium-chromium-driver-4.11.0.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver$ChromeDriverCommandExecutor.<init>(ChromeDriver.java:115) [selenium-chrome-driver-4.11.0.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:105) [selenium-chrome-driver-4.11.0.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88) [selenium-chrome-driver-4.11.0.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:83) [selenium-chrome-driver-4.11.0.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:51) [selenium-chrome-driver-4.11.0.jar:?]
+	at SeleniumTutorialsByPavanSir.DropDownUnderSelectTag.main(DropDownUnderSelectTag.java:14) [test-classes/:?]
+13:21:08.990 [main] DEBUG io.netty.util.internal.PlatformDependent0 - java.nio.DirectByteBuffer.<init>(long, int): unavailable
+13:21:08.990 [main] DEBUG io.netty.util.internal.PlatformDependent - sun.misc.Unsafe: available
+13:21:08.991 [main] DEBUG io.netty.util.internal.PlatformDependent - maxDirectMemory: 2124414976 bytes (maybe)
+13:21:08.991 [main] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.tmpdir: C:\Users\aparn\AppData\Local\Temp (java.io.tmpdir)
+13:21:08.991 [main] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+13:21:08.992 [main] DEBUG io.netty.util.internal.PlatformDependent - Platform: Windows
+13:21:08.993 [main] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.maxDirectMemory: -1 bytes
+13:21:08.993 [main] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+13:21:08.995 [main] DEBUG io.netty.util.internal.CleanerJava9 - java.nio.ByteBuffer.cleaner(): available
+13:21:08.995 [main] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.noPreferDirect: false
+13:21:09.005 [main] DEBUG io.netty.util.internal.PlatformDependent - org.jctools-core.MpscChunkedArrayQueue: available
+13:21:09.045 [main] DEBUG io.netty.util.internal.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+13:21:09.046 [main] DEBUG io.netty.util.internal.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+13:21:09.325 [main] DEBUG io.netty.handler.ssl.JdkSslContext - Default protocols (JDK): [TLSv1.3, TLSv1.2] 
+13:21:09.325 [main] DEBUG io.netty.handler.ssl.JdkSslContext - Default cipher suites (JDK): [TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384]
